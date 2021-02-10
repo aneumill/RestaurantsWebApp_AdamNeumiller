@@ -1,0 +1,44 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "View Suggestions";
+}
+@model IEnumerable<RestaurantsWebApp_AdamNeumiller.Models.UserRestaurant>;
+
+<div class="text-center">
+
+    <h2>Restaurant Suggestions</h2>
+    <table class="center table table-dark table-striped"">
+        <thead class="center table table-dark">
+            <tr>
+                <th>Name    </th>
+                <th>Restaurant Name    </th>
+                <th>Dish    </th>
+                <th>Phone     </th>
+
+            </tr>
+        </thead>
+        <tbody>
+
+            @foreach (RestaurantsWebApp_AdamNeumiller.Models.UserRestaurant x in Model)
+            {
+                <tr>
+                    <td>@x.UserName</td>
+                    <td>@x.RestaurantName</td>
+                    <td>@x.Dish</td>
+                    <td>@x.RestaurantPhone</td>
+
+
+
+
+                </tr>
+            }
+
+
+        </tbody>
+    </table>
+
+    <div asp-validation-summary="All"></div>
+
+</div>

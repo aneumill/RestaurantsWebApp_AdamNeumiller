@@ -1,0 +1,29 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Add Suggestions";
+    @model RestaurantsWebApp_AdamNeumiller.Models.UserRestaurant;
+}
+<form asp-action="AddSuggestion" method="post" class="center">
+    <div>
+        <label asp-for="UserName">Your Name</label>
+        <input asp-for="UserName" placeholder="Spongebob Squarepants" />
+    </div>
+    <div>
+        <label asp-for="RestaurantName">Restaurant Name</label>
+        <input placeholder="Krusty Krab" asp-for="RestaurantName" />
+    </div>
+    <div>
+        <label asp-for="Dish">Favorite Dish</label>
+        <input asp-for="Dish"placeholder="Krabby Patty" />
+    </div>
+    <div>
+        <label asp-for="RestaurantPhone">Restaurant Phone</label>
+        <input placeholder="801-111-1111" type="text" asp-for="RestaurantPhone" />
+    </div>
+    <br />
+    <button type="submit" id="button" class="btn btn-dark"> Submit </button>
+</form>
+
+<div asp-validation-summary="All"></div>
