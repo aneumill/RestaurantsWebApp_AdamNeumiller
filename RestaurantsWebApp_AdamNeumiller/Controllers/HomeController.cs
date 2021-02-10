@@ -25,7 +25,7 @@ namespace RestaurantsWebApp_AdamNeumiller.Controllers
             foreach (Restaurant r in Restaurant.GetRestaurants())
             {
 
-                restaurantList.Add($"#{r.iRestaurantRanking} {r.sRestaurantName} -- {r.sRestaurantAddress} -- Favorite Dish: {r.sRestaurantDish ?? "It's all Tasty" }--{r.sRestaurantPhone} -- Website: { r.sRestaurantWebsite ?? "Coming Soon"}") ;
+                restaurantList.Add($"#{r.iRestaurantRanking} {r.sRestaurantName} -- {r.sRestaurantAddress} -- Favorite Dish: {r.sRestaurantDish ?? "It's all Tasty" }--{r.sRestaurantPhone} -- Website: <a href='{ r.sRestaurantWebsite ?? "#"}'> {r.sRestaurantWebsite ?? "Coming Soon"} </a>"); 
             }
 
             return View(restaurantList);
