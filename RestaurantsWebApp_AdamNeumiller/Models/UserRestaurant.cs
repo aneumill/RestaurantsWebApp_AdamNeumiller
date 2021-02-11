@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
-
+//Submission page model
 namespace RestaurantsWebApp_AdamNeumiller.Models
 {
     public class UserRestaurant
